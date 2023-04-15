@@ -13,3 +13,8 @@ torch.manual_seed(opt.seed)
 numpy.random.seed(opt.seed)
 random.seed(opt.seed)
 
+# torch.backends.cudnn.deterministic = True
+# 这个是要下Cudnn吗
+
+data_loader = CreateDataloader(opt)
+dataset = data_loader.loa

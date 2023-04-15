@@ -17,7 +17,7 @@ class BaseOptions():
         self.isTrain = False
 
     def initialize(self):
-        #self.parser.add_argument('--dataroot', required=True, default='../data', help='path to images')
+        self.parser.add_argument('--dataroot', required=True, default='../data', help='path to images')
         self.parser.add_argument('--dataroot', default='../../data', help='path to images')
         self.parser.add_argument('--batchsize', type=int, default=32, help='input batch size')
         self.parser.add_argument('--loadsize', type=int,default=256, help='scale image to this size')
