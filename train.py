@@ -17,4 +17,4 @@ random.seed(opt.seed)
 # 这个是要下Cudnn吗
 
 data_loader = CreateDataloader(opt)
-dataset = data_loader.loa
+# dataset = data_loader.loa
