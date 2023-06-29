@@ -18,3 +18,10 @@ random.seed(opt.seed)
 
 data_loader = CreateDataloader(opt)
 # dataset = data_loader.loa
+
+def main():
+    # 主函数了，这个时候首先是全部的参数传递
+    config =
+
+if __name__ = '__main__':
+    main()
