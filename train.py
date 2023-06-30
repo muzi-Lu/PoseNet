@@ -3,25 +3,42 @@ from options.train_options import TrainOptions
 from data.data_loader import CreateDataloader
 from models.models import create_model
 from util.visualizer import Visualizer
-
-opt = TrainOptions().parse()
+from util.common.config_parser import AbsPoseConfig
+from util.common.setup import *
 
 import torch
 import numpy
 import random
-torch.manual_seed(opt.seed)
-numpy.random.seed(opt.seed)
-random.seed(opt.seed)
 
-# torch.backends.cudnn.deterministic = True
-# 这个是要下Cudnn吗
+def setup_config(config):
+    print('Setup configurations...')
+    # Seedings
+    make_deterministic(config.seed)
 
-data_loader = CreateDataloader(opt)
-# dataset = data_loader.loa
+    # Setup logging dir
+
+    # Setup running devices
+
+    # Setup datasets
+
+    # Define image preprocessing
+
+    # Model initialization
+
+    # Setup optimizer
+
+def train():
+    pass
+
+def test():
+    pass
 
 def main():
     # 主函数了，这个时候首先是全部的参数传递
-    config =
+    config = AbsPoseConfig().parse()
+    setup_config(config)
 
-if __name__ = '__main__':
+
+
+if __name__ == '__main__':
     main()
