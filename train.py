@@ -68,6 +68,7 @@ def main():
     setup_config(config)
 
     log = open(config.log, 'a')
+    # Nothing
 
 
 
