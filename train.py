@@ -132,11 +132,17 @@ def main():
     else:
         val_loader = None
 
-    if config.weig
+    if config.weights_dir:
+        lprint('Load weights dict {}'.format(config.weights_dir))
 
-    if config.validate:
-        pass
+    net = networks.__dict__[config.network](config)
+    lprint('Model params: {} Optimizer params: {}'.format(net.state_dict()), len(net.optimizer.param_groups[0]['params']))
 
+    if config.training:
+        train(net, config, log, data_loader, val_loader)
+    else:
+        test()
+    log.close()
 
 
 if __name__ == '__main__':
